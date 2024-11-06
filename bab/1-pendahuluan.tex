@@ -1,0 +1,102 @@
+\chapter{PENDAHULUAN}
+\label{chap:pendahuluan}
+
+% Ubah bagian-bagian berikut dengan isi dari pendahuluan
+
+\section{Latar Belakang}
+\label{sec:latarbelakang}
+Penggunaan truk sebagai moda transportasi pengiriman barang di Indonesia terus meningkat setiap tahunnya. Berdasarkan data Badan Pusat Statistik tahun 2023 \parencite*{bps2023}, truk merupakan kendaraan terbanyak ketiga setelah sepeda motor dan mobil penumpang, dengan jumlah yang signifikan di berbagai provinsi. Namun, penggunaan truk sebagai moda transportasi pengiriman barang juga menimbulkan dampak negatif, salah satunya adalah kecelakaan lalu lintas. Berdasarkan jurnal Analisis Pengaruh Kendaraan \emph{ODOL} terhadap Tingkat Kecelakaan di Jalan Tol \parencite*{odol2020} didapatkan bahwa pengaruh kendaraan \emph{ODOL} terhadap tingkat kecelakaan di jalan tol berhasil dibuktikan sebesar 32\% dengan sisanya merupakan faktor lainnya. Kerugian dari kecelakaan \emph{ODOL} juga menyebabkan penurunan kecepatan rata-rata kendaraan di jalan tol sebesar 12\%.
+
+Selain itu, pemeriksaan ODOL oleh UPPKB (Unit Pelaksana Penimbangan Kendaraan Bermotor) menyatakan bahwa pada tahun 2023, rata-rata kendaraan yang masuk dan diperiksa hanya berkisar di angka 5\%. Dari jumlah tersebut, sebanyak 27,95\% kendaraan terbukti melakukan pelanggaran. Mayoritas pelanggaran terkait dengan kelebihan muatan, mencapai 69\%, sementara sisanya sebesar 31\% berkaitan dengan pelanggaran dokumen. Kendaraan yang melanggar ketentuan muatan rata-rata membawa beban berlebih antara 5\% hingga 20\% dari kapasitas yang diizinkan \parencite*{hubdat2024}. Kondisi ini menunjukkan bahwa metode pemeriksaan manual memiliki keterbatasan dan tidak cukup efektif untuk mengurangi pelanggaran secara signifikan.
+
+Oleh karena itu, dibutuhkan sistem otomatis yang mampu mendeteksi pelanggaran secara real-time, meningkatkan cakupan pemantauan, dan memberikan notifikasi langsung kepada pengguna. Sistem ini harus mampu mengidentifikasi kendaraan yang melanggar batas dimensi yang diizinkan, adapun teknologi yang digunakan adalah \emph{deep learning} terkhusus \emph{Convolutional Neural Network} (CNN). Implementasi model \emph{deep learning} pada perangkat \emph{edge device} akan memungkinkan sistem dapat berjalan secara \emph{realtime} dan dapat diaplikasikan pada berbagai lokasi tanpa memerlukan infrastruktur yang rumit.
+
+\section{Rumusan Masalah}
+\label{sec:rumusanmasalah}
+
+Pelanggaran \emph{overdimension} pada kendaraan bermotor merupakan masalah serius yang dapat menimbulkan kerugian baik dari segi ekonomi maupun keselamatan. Namun, metode pemeriksaan manual yang saat ini digunakan oleh UPPKB memiliki keterbatasan dan tidak cukup efektif untuk mengurangi pelanggaran secara signifikan. Oleh karena itu, diperlukan sistem deteksi otomatis yang mampu mendeteksi kendaraan \emph{overdimension} secara \emph{realtime} dengan tingkat akurasi yang tinggi dan efisiensi yang optimal. Berdasarkan latar belakang tersebut, rumusan masalah yang diangkat dalam penelitian ini adalah sebagai berikut:
+
+\begin{enumerate}[nolistsep]
+
+  \item Bagaimana cara menerapkan sistem deteksi agar dapat dijalankan pada perangkat \emph{edge device}?
+  
+  \item Bagaimana cara membuat sistem deteksi yang \emph{scalable} dan dapat diintegrasikan dengan sistem yang sudah ada?
+  
+  \item Bagaimana cara menambahkan fitur notifikasi otomatis kepada pihak berwenang saat terjadi pelanggaran \emph{overdimension}?
+  
+\end{enumerate}
+
+\section{Tujuan}
+\label{sec:Tujuan}
+
+Tujuan utama dari penelitian ini yaitu:
+
+\begin{enumerate}[nolistsep]
+
+  \item Menerapkan sistem deteksi agar dapat dijalankan pada perangkat \emph{edge device}.
+  
+  \item Membuat sistem deteksi yang \emph{scalable} dan dapat diintegrasikan dengan sistem yang sudah ada.
+  
+  \item Menambahkan fitur notifikasi otomatis kepada pihak berwenang saat terjadi pelanggaran \emph{overdimension}.
+  
+\end{enumerate}
+
+\section{Batasan Masalah}
+\label{sec:batasanmasalah}
+
+Penelitian ini terfokus pada penggunaan model \emph{deep learning} terkhusus \emph{Convolutional Neural Network} (CNN) untuk mendeteksi kendaraan \emph{overdimension} secara \emph{realtime}. Adapun batasan masalah yang diangkat dalam penelitian ini adalah sebagai berikut:
+
+\begin{enumerate}[nolistsep]
+
+  \item Pembatasan pada model deep learning spesifik untuk deteksi kendaraan \emph{overdimension}, tanpa mengeksplorasi model lain.
+  
+  \item Pengujian awal sistem mungkin dilakukan dalam lingkungan terkendali, namun diharapkan dapat diaplikasikan pada berbagai lokasi dengan kondisi yang berbeda.
+  
+\end{enumerate}
+
+\section{Manfaat}
+\label{sec:manfaatpenulisan}
+
+Adapun manfaat yang didapat pada pelaksanaan tugas akhir ini adalah sebagai berikut:
+
+\begin{enumerate}[nolistsep]
+
+  \item Memberikan kontribusi pada pengembangan teknologi deteksi kendaraan \emph{overdimension} menggunakan model \emph{deep learning}.
+  
+  \item Memberikan solusi yang efektif dan efisien dalam mendeteksi kendaraan \emph{overdimension} secara \emph{realtime}.
+  
+  \item Memberikan rekomendasi untuk penelitian selanjutnya dalam pengembangan sistem deteksi kendaraan \emph{overdimension}.
+  
+\end{enumerate}
+
+\section{Sistematika Penulisan}
+\label{sec:sistematikapenulisan
+}
+
+Dalam pembuatan laporan penelitian tugas akhir ini akan terbagi menjadi lima bagian bab yang meliputi:
+
+\begin{enumerate}[nolistsep]
+
+  \item \textbf{BAB I Pendahuluan} \\     
+      Bab ini berisi penjelasan mengenai latar belakang yang mengarah pada permasalahan yang akan diangkat serta solusi yang diberikan. Selain itu terdapat pula tujuan dari penelitian serta batasan masalah dari cakupan yang akan dikerjakan.
+        \vspace{2ex}
+
+  \item \textbf{BAB II Tinjauan Pustaka} \\
+      Bab ini berisi penelitian terdahulu dengan topik yang berhubungan dengan penelitian yang akan dilakukan. Selain itu, pada bab ini dijelaskan juga mengenai teori - teori yang akan digunakan untuk membantu pengerjaan penelitian.
+
+        \vspace{2ex}
+
+  \item \textbf{BAB III Desain dan Implementasi Sistem} \\
+      Bab ini berisi penjelasan mengenai rancangan dan metodologi penelitian secara sistematis serta pengimplementasiannya dalam setiap metode sehingga mendapatkan hasil dari penelitian.
+
+        \vspace{2ex}
+
+  % \item \textbf{BAB IV Pengujian dan Analisa} \\
+  %     Bab ini berisi mengenai hasil penelitian yang telah didapatkan dari metodologi yang telah dilakukan. Kemudian akan dijelaskan juga mengenai pengujian yang akan dilakukan dalam keadaan yang telah ditentukan beserta dengan pembahasan akan hasil pengujian dan fenomena yang terjadi.
+
+  %       \vspace{2ex}
+
+  % \item \textbf{BAB V Penutup} \\
+  %     Bab ini berisi kesimpulan yang didapatkan dari hasil penelitian berdasarkan permasalahan dan tujuan di awal. Selain itu, terdapat juga saran untuk para peneliti yang ingin mengembangkan penelitian dengan topik yang sama ataupun beririsan.
+
+\end{enumerate}
