@@ -7,3 +7,10 @@ def apakahBilanganPrima(nilai):
             return True
     else:
         return False
+
+def palindrome(nilai):
+    nilai = str(nilai)
+    if nilai == nilai[::-1]:
+        return True
+    else:
+        return False
