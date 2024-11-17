@@ -11,7 +11,7 @@ Adapun penulis mengambil beberapa penelitian terdahulu yang mengambil topik yang
 
 \subsection{Deteksi Kendaraan Truk pada Video Menggunakan Metode Tiny-YOLO v4}
 \label{subsec:deteksikendaraantrukprismadika}
-Penelitian oleh Prismadika Yuniar \parencite*{prismadika2023} mengkaji deteksi truk secara real-time dalam video pengamatan di jalan raya. Tantangan muncul karena truk memiliki dimensi serupa dengan bus dan struktur mekanis mirip pikap. Pada tahap awal, model YOLO asli hanya mampu mendeteksi bagian kepala dan bak truk tanpa memperhitungkan muatan. Oleh karena itu, dibuat custom dataset dengan bounding box untuk seluruh bagian truk beserta muatannya.
+Penelitian oleh Prismadika Yuniar et al. (2023) \parencite*{prismadika2023} mengkaji deteksi truk secara real-time dalam video pengamatan di jalan raya. Tantangan muncul karena truk memiliki dimensi serupa dengan bus dan struktur mekanis mirip pikap. Pada tahap awal, model YOLO asli hanya mampu mendeteksi bagian kepala dan bak truk tanpa memperhitungkan muatan. Oleh karena itu, dibuat custom dataset dengan bounding box untuk seluruh bagian truk beserta muatannya.
 
 Tiny-YOLOv4 dipilih karena lebih ringan dan kompatibel dengan perangkat beragam. Pengujian pada tiga perangkat menunjukkan bahwa Laptop Acer E5 mencapai akurasi 98,2\% pada 13 FPS, Laptop Lenovo Legion 5 98\% pada 28 FPS, dan PC Dell Precision 3640 Tower 97,5\% pada 38 FPS. 
 
@@ -19,17 +19,30 @@ Hasil yang didapatkan yaitu FPS yang lebih tinggi cenderung menurunkan akurasi, 
 
 \subsection{Sistem Deteksi Kendaraan Overdimension secara Real-time menggunakan Deep Learning di Jalan Raya}
 \label{subsec:deteksikendaraanoverdimensionhamayan}
-Penelitian ini dilakukan oleh Ahmad Hamayan \parencite*{hamayan2024} pada tahun 2024. Penelitian ini bertujuan untuk mengembangkan sistem deteksi kendaraan overdimension secara real-time menggunakan deep learning di jalan raya. Sistem ini menggunakan model YOLOv8 yang telah dimodifikasi untuk mendeteksi kendaraan overdimension. Dataset yang digunakan adalah dataset yang telah diambil dari jalan raya di Indonesia. Variasi yang digunakan yaitu variasi akurasi pada berbagai macam perangkat dan model YOLOv8.
+Penelitian ini dilakukan oleh Ahmad Hamayan Nabih (2024) \parencite*{hamayan2024}. Penelitian ini bertujuan untuk mengembangkan sistem deteksi kendaraan overdimension secara real-time menggunakan deep learning di jalan raya. Sistem ini menggunakan model YOLOv8 yang telah dimodifikasi untuk mendeteksi kendaraan overdimension. Dataset yang digunakan adalah dataset yang telah diambil dari jalan raya di Indonesia. Variasi yang digunakan yaitu variasi akurasi pada berbagai macam perangkat dan model YOLOv8.
 
 Variasi perangkat meliputi PC dengan External VGA NVIDIA GeForce GTX 1650Ti, Laptop tanpa External VGA, dan Intel NUC i5 Gen 11. Hasil yang didapatkan yaitu PC dengan External VGA NVIDIA GeForce GTX 1650Ti mampu mendeteksi kendaraan overdimension dengan akurasi 85\% - 90\% pada 33 FPS - 63 FPS, Laptop tanpa External VGA dengan akurasi 87\% - 92\% pada 7 FPS - 10 FPS, dan Intel NUC i5 Gen 11 dengan akurasi 79\% - 90\% pada 2 FPS. Sedangkan variasi model YOLOv8 meliputi YOLOv8n dan YOLOv8s, dimana YOLOv8n di-\emph{training} dengan 50 \emph{epoch} dan YOLOv8s di-\emph{training} dengan 75 \emph{epoch}.
 
 Kesimpulan yang didapatkan yaitu model YOLOv8n lebih baik dari segi FPS dibandingkan dengan YOLOv8s namun memiliki akurasi yang lebih rendah. Sedangkan model pembandingnya, yaitu YOLOv8s memiliki akurasi yang lebih tinggi namun FPS yang lebih rendah. Kemudian juga ditemukan bahwa perangkat dengan spesifikasi yang lebih tinggi mampu mendeteksi kendaraan overdimension dengan akurasi yang lebih tinggi dan FPS yang lebih tinggi.
+
+\subsection{Implementasi Sistem Penghitung Kendaraan Otomatis Berbasis Computer Vision}
+\label{subsec:implementasisistemhitungkendaraan}
+Penelitian ini dilakukan oleh Dolly Indra et al. (2023) \parencite*{dolly2023}. Penelitian ini bertujuan untuk mengembangkan sistem penghitung kendaraan otomatis di tempat pencucian kendaraan. Sistem ini menggunakan Raspberry Pi 4 sebagai \emph{edge device} dan model SSD MobileNet V2 sebagai model deteksi. Sistem ini mampu menghitung jumlah kendaraan yang masuk dan keluar dari tempat pencucian kendaraan secara realtime yang terhubung dengan aplikasi \emph{mobile}.
+
+Hasil yang didapatkan yaitu sistem otomatis mampu mendeteksi kendaraan mobil dan motor dengan rata-rata tingkat akurasi sebesar 46,6 \% dan aplikasi yang terdapat pada \emph{smartphone} mampu menghitung jumlah kendaraan yang masuk dan keluar dari tempat pencucian kendaraan.
 
 \section{Teori/Konsep Dasar}
 \label{sec:teorikonsepdasar}
 Adapun berikut adalah teori atau konsep dasar yang digunakan penulis sebagai landasan teoritis dalam pelaksanaan tugas akhir ini.
 
 \subsection{CNN (\emph{Convolutional Neural Network})}
+\emph{Convolutional Neural Networks} (CNN) merupakan salah satu arsitektur deep learning yang paling banyak digunakan dalam pengolahan citra. CNN pertama kali diperkenalkan oleh Yan LeCun et al. (1998) \parencite*{yannlecun1998} dalam penelitian tentang pengenalan tulisan tangan menggunakan LeNet-5. Model ini menggabungkan operasi konvolusi, \emph{subsampling} (\emph{pooling}), dan \emph{fully connected layers} untuk mengekstraksi fitur secara hierarkis dari gambar input.
+
+Perkembangan CNN semakin pesat dengan adanya inovasi pada arsitektur. Salah satu inovasi signifikan adalah Residual Neural Network (ResNet) yang diperkenalkan oleh Kaiming He et al. (2015) \parencite*{kaiminghe2015}. ResNet memperkenalkan konsep \emph{skip connection} yang memungkinkan model untuk belajar representasi yang lebih baik dari data. Hal ini memungkinkan model untuk dilatih dengan kedalaman yang lebih besar tanpa mengalami masalah \emph{vanishing gradient}.
+
+Selain itu, metode modern seperti normalisasi batch (\emph{BatchNorm}) yang dikembangkan oleh Ioffe et al. (2015) \parencite*{ioffe2015} dan Szegedy et al. (2015) \parencite*{szegedy2015} telah menjadi standar dalam pelatihan CNN. \emph{BatchNorm} membantu jaringan untuk melakukan konvergensi lebih cepat dengan menormalkan distribusi setiap batch selama pelatihan. Penggunaan konvolusi 1x1, seperti pada arsitektur \emph{Inception}, juga memperkenalkan cara baru untuk mengurangi jumlah parameter sambil mempertahankan kapasitas jaringan.
+
+Penerapan CNN telah meluas ke berbagai domain, termasuk deteksi objek, segmentasi citra, dan pengenalan pola. Dalam konteks penelitian ini, CNN digunakan untuk mendeteksi kendaraan overdimensi berdasarkan karakteristik visualnya. Pendekatan ini sesuai dengan studi sebelumnya yang menunjukkan kemampuan CNN dalam mengolah data visual dengan tingkat akurasi yang tinggi.
 
 \subsection{SSD (\emph{Single Shot MultiBox Detector}) MobileNet}
 
