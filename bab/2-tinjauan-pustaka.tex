@@ -10,7 +10,7 @@ Penelitian ini mengambil referensi dari beberapa penelitian terdahulu dengan top
 
 \subsection{Deteksi Kendaraan Truk pada Video Menggunakan Metode Tiny-YOLOv4}
 \label{subsec:deteksikendaraantrukprismadika}
-Penelitian oleh Prismadika Yuniar et al. \parencite*{prismadika2023} mengkaji deteksi truk secara \emph{real-time} dalam video pengamatan di jalan raya. Tantangan muncul karena truk memiliki dimensi serupa dengan bus dan struktur mekanis mirip pikap. Pada tahap awal, model YOLO asli hanya mampu mendeteksi bagian kepala dan bak truk tanpa memperhitungkan muatan. Oleh karena itu, dibuat custom \emph{dataset} dengan bounding box untuk seluruh bagian truk beserta muatannya.
+Penelitian oleh Prismadika Yuniar et al. \parencite*{prismadika2023} mengkaji deteksi truk secara \emph{real-time} dalam video pengamatan di jalan raya. Tantangan muncul karena truk memiliki dimensi serupa dengan bus dan struktur mekanis mirip pikap. Pada tahap awal, model YOLO asli hanya mampu mendeteksi bagian kepala dan bak truk tanpa memperhitungkan muatan. Oleh karena itu, dibuat \emph{custom dataset} dengan \emph{bounding box} untuk seluruh bagian truk beserta muatannya.
 
 Tiny-YOLOv4 dipilih karena lebih ringan dan kompatibel dengan perangkat beragam. Pengujian pada tiga perangkat menunjukkan bahwa Laptop Acer E5 mencapai akurasi 98,2\% pada 13 FPS, Laptop Lenovo Legion 5 98\% pada 28 FPS, dan PC Dell Precision 3640 Tower 97,5\% pada 38 FPS. 
 
@@ -44,23 +44,22 @@ Hasil yang didapatkan yaitu sistem otomatis mampu mendeteksi kendaraan mobil dan
   \label{fig:basic_nn}
 \end{figure}
 
-\subsubsection{Perceptron}
-\emph{Perceptron} merupakan dasar dari NN, yang diperkenalkan oleh Frank Rosenblatt pada tahun 1958 \parencite*{rosenblatt1958perceptron}. \emph{Perceptron} adalah model jaringan saraf tiruan yang paling sederhana, yang memodelkan sebuah neuron dalam otak. Struktur dasar perceptron terdiri dari input \( x_1, x_2, \dots, x_n \), \emph{weights} (bobot) \( w_1, w_2, \dots, w_n \), dan bias \( b \). Output dari perceptron dihitung menggunakan rumus:
+\subsubsection{\emph{Perceptron}}
+\emph{Perceptron} merupakan dasar dari NN, yang diperkenalkan oleh Frank Rosenblatt pada tahun 1958 \parencite*{rosenblatt1958perceptron}. \emph{Perceptron} adalah model jaringan saraf tiruan yang paling sederhana, yang memodelkan sebuah neuron dalam otak. Struktur dasar \emph{perceptron} terdiri dari \emph{input} \( x_1, x_2, \dots, x_n \), \emph{weights} (bobot) \( w_1, w_2, \dots, w_n \), dan bias \( b \). \emph{Output} dari \emph{perceptron} dihitung menggunakan rumus:
 \[ y = f(w \cdot x + b) \]
 dimana \( f \) adalah fungsi aktivasi, \( w \cdot x \) adalah \emph{dot product} antara vektor bobot dan vektor input, dan \( b \) adalah bias.
-
  
  \subsubsection{\emph{Activation Function}}
- \emph{Activation function} menentukan output dari sebuah neuron berdasarkan input total yang diterima. Beberapa fungsi aktivasi yang sering digunakan adalah:
+ \emph{Activation function} menentukan \emph{output} dari sebuah \emph{neuron} berdasarkan \emph{input} total yang diterima. Beberapa fungsi aktivasi yang sering digunakan adalah:
  \begin{itemize}
-   \item Sigmoid: \( \sigma(x) = \frac{1}{1 + e^{-x}} \). Fungsi ini menghasilkan output dalam rentang \( (0, 1) \), yang berguna untuk tugas klasifikasi biner.
-   \item Tanh: \( \tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \). Fungsi ini menghasilkan output dalam rentang \( (-1, 1) \), yang membantu dalam mengatasi masalah \emph{vanishing gradient}. Yaitu ketika nilai input yang besar atau kecil menyebabkan gradien yang sangat kecil.
-   \item ReLU (Rectified Linear Unit): \( ReLU(x) = \max(0, x) \). Fungsi ini menghasilkan output \( 0 \) jika input \( x \leq 0 \) dan \( x \) jika \( x > 0 \). ReLU adalah fungsi aktivasi yang paling umum digunakan dalam arsitektur NN modern karena sederhana dan efektif.
+   \item Sigmoid: \( \sigma(x) = \frac{1}{1 + e^{-x}} \). Fungsi ini menghasilkan \emph{output} dalam rentang \( (0, 1) \), yang berguna untuk tugas klasifikasi biner.
+   \item Tanh: \( \tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \). Fungsi ini menghasilkan \emph{output} dalam rentang \( (-1, 1) \), yang membantu dalam mengatasi masalah \emph{vanishing gradient}. Yaitu ketika nilai \emph{input} yang besar atau kecil menyebabkan gradien yang sangat kecil.
+   \item ReLU (Rectified Linear Unit): \( ReLU(x) = \max(0, x) \). Fungsi ini menghasilkan \emph{output} \( 0 \) jika \emph{input} \( x \leq 0 \) dan \( x \) jika \( x > 0 \). ReLU adalah fungsi aktivasi yang paling umum digunakan dalam arsitektur NN modern karena sederhana dan efektif.
  \end{itemize}
 
  Berikut beberapa grafik dari \emph{activation function} yang disebutkan di atas.
 
-  \begin{figure}[htbp]
+  \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{gambar/bab2-grafik-sigmoid.png}
     \caption{Grafik \emph{Activation function Sigmoid}}
@@ -69,20 +68,20 @@ dimana \( f \) adalah fungsi aktivasi, \( w \cdot x \) adalah \emph{dot product}
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{gambar/bab2-grafik-tanh.png}
+    \includegraphics[scale=0.8]{gambar/bab2-grafik-tanh.png}
     \caption{Grafik \emph{Activation function Tanh}}
     \label{fig:tanh_function}
   \end{figure}
 
   \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{gambar/bab2-grafik-relu.png}
+    \includegraphics[scale=0.5]{gambar/bab2-grafik-relu.png}
     \caption{Grafik \emph{Activation function ReLU}}
     \label{fig:relu_function}
   \end{figure}
  
  \subsubsection{\emph{Feed Forward}}
- Mekanisme \emph{feed forward} adalah proses pengiriman input melalui lapisan-lapisan dari NN untuk mendapatkan output. Setiap neuron dalam lapisan menerima input dari semua neuron di lapisan sebelumnya, mengaplikasikan bobot dan bias, dan menghasilkan output menggunakan fungsi aktivasi.
+ Mekanisme \emph{feed forward} adalah proses pengiriman input melalui lapisan-lapisan dari NN untuk mendapatkan \emph{output}. Setiap neuron dalam lapisan menerima \emph{input} dari semua neuron di lapisan sebelumnya, mengaplikasikan bobot dan bias, dan menghasilkan \emph{output} menggunakan fungsi aktivasi.
  
  \subsubsection{\emph{Backpropagation}}
  \emph{Backpropagation} adalah metode yang digunakan untuk memperbarui bobot jaringan dengan cara mengoptimalkan fungsi kerugian. Proses ini melibatkan penghitungan gradien fungsi kerugian terhadap setiap bobot di jaringan dengan menggunakan aturan rantai, dan secara iteratif mengatur ulang bobot untuk meminimalkan \emph{loss}.
@@ -97,30 +96,30 @@ dimana \( f \) adalah fungsi aktivasi, \( w \cdot x \) adalah \emph{dot product}
  \subsubsection{\emph{Loss Function} dan \emph{Optimizer}}
  \emph{Loss function} mengukur seberapa baik model NN melakukan prediksi dibandingkan dengan nilai sebenarnya. \emph{Loss function} yang umum meliputi:
  \begin{itemize}
-   \item \textbf{Gradient Descent}: Metode optimisasi yang digunakan untuk meminimalkan fungsi kerugian dengan mengupdate bobot jaringan berdasarkan gradien fungsi kerugian.
-   \item \textbf{Stochastic Gradient Descent (SGD)}: Versi sederhana dari \emph{Gradient Descent} yang memperbarui bobot jaringan berdasarkan gradien dari satu sampel data.
-   \item \textbf{Momentum}: Metode optimisasi yang membantu percepatan konvergensi dengan menambahkan momentum pada proses \emph{Gradient Descent}.
-   \item \textbf{RMSprop}: Metode optimisasi yang menyesuaikan laju pembelajaran untuk setiap parameter berdasarkan gradien rata-rata kuadrat sebelumnya.
-   \item \textbf{Adam}: Algoritma optimisasi yang menggabungkan konsep dari \emph{Momentum} dan \emph{RMSprop} untuk memperbarui bobot jaringan secara adaptif.
+   \item \textbf{\emph{Gradient Descent}}: Metode optimisasi yang digunakan untuk meminimalkan fungsi kerugian dengan mengupdate bobot jaringan berdasarkan gradien fungsi kerugian.
+   \item \textbf{\emph{Stochastic Gradient Descent} (SGD)}: Versi sederhana dari \emph{Gradient Descent} yang memperbarui bobot jaringan berdasarkan gradien dari satu sampel data.
+   \item \textbf{\emph{Momentum}}: Metode optimisasi yang membantu percepatan konvergensi dengan menambahkan momentum pada proses \emph{Gradient Descent}.
+   \item \textbf{\emph{RMSprop}}: Metode optimisasi yang menyesuaikan laju pembelajaran untuk setiap parameter berdasarkan gradien rata-rata kuadrat sebelumnya.
+   \item \textbf{\emph{Adam}}: Algoritma optimisasi yang menggabungkan konsep dari \emph{Momentum} dan \emph{RMSprop} untuk memperbarui bobot jaringan secara adaptif.
  \end{itemize}
  
- Optimisasi adalah proses mencari parameter model yang meminimalkan fungsi kerugian. Algoritma optimisasi yang sering digunakan antara lain Stochastic Gradient Descent (SGD), Adam, dan RMSprop. Adapun pada penelitian ini, digunakan algoritma Adam sebagai \emph{optimizer} untuk memperbarui bobot jaringan karena kemampuannya dalam menyesuaikan laju pembelajaran secara adaptif.
+ Optimisasi adalah proses mencari parameter model yang meminimalkan fungsi kerugian. Algoritma optimisasi yang sering digunakan antara lain \emph{Stochastic Gradient Descent} (SGD), \emph{Adam}, dan \emph{RMSprop}. Adapun pada penelitian ini, digunakan algoritma Adam sebagai \emph{optimizer} untuk memperbarui bobot jaringan karena kemampuannya dalam menyesuaikan laju pembelajaran secara adaptif.
  
  \subsubsection{CNN (\emph{Convolutional Neural Network})}
- CNN (\emph{Convolutional Neural Networks}) memperluas konsep NN dengan memasukkan lapisan konvolusi, yang menggunakan filter untuk mengekstraksi fitur spatial dari data input. Berikut merupakan beberapa konsep dasar dalam CNN:
+ CNN (\emph{Convolutional Neural Networks}) memperluas konsep NN dengan memasukkan lapisan konvolusi, yang menggunakan filter untuk mengekstraksi fitur spatial dari data \emph{input}. Berikut merupakan beberapa konsep dasar dalam CNN:
  \begin{itemize}
    \item \textbf{\emph{Convolutional Layer}}: Menggunakan filter atau \emph{kernel} yang 'meluncur' di atas gambar untuk menghasilkan \emph{feature map}.
    \item \textbf{\emph{Stride}}: Jumlah piksel yang dilewati filter pada setiap gerakan. Stride yang lebih besar menghasilkan \emph{feature map} yang lebih kecil.
    \item \textbf{\emph{Padding}}: Penambahan piksel di sekitar input untuk memungkinkan filter beroperasi di tepi gambar.
-   \item \textbf{\emph{Pooling Layer}} (Subsampling): Mengurangi dimensi spatial dari \emph{feature map} untuk mengurangi jumlah parameter dan komputasi. Contohnya adalah \emph{max pooling} dan \emph{average pooling}.
+   \item \textbf{\emph{Pooling Layer}} (\emph{Subsampling}): Mengurangi dimensi spatial dari \emph{feature map} untuk mengurangi jumlah parameter dan komputasi. Contohnya adalah \emph{max pooling} dan \emph{average pooling}.
    \item \textbf{\emph{Fully Connected Layer}}: Lapisan di mana setiap neuron terhubung ke semua neuron di lapisan sebelumnya, biasanya digunakan di akhir jaringan untuk mengklasifikasikan fitur yang diekstraksi oleh lapisan konvolusi.
  \end{itemize} 
 
- CNN merupakan salah satu arsitektur deep learning yang paling banyak digunakan dalam pengolahan citra. CNN pertama kali diperkenalkan oleh Yan LeCun et al. \parencite*{yannlecun1998} dalam penelitian tentang pengenalan tulisan tangan menggunakan LeNet-5. Model ini menggabungkan operasi konvolusi, \emph{subsampling} (\emph{pooling}), dan \emph{fully connected layers} untuk mengekstraksi fitur secara hierarkis dari gambar input.
+ CNN merupakan salah satu arsitektur \emph{deep learning} yang paling banyak digunakan dalam pengolahan citra. CNN pertama kali diperkenalkan oleh Yan LeCun et al. \parencite*{yannlecun1998} dalam penelitian tentang pengenalan tulisan tangan menggunakan LeNet-5. Model ini menggabungkan operasi konvolusi, \emph{subsampling} (\emph{pooling}), dan \emph{fully connected layers} untuk mengekstraksi fitur secara hierarkis dari gambar \emph{input}.
  
-Perkembangan CNN semakin pesat dengan adanya inovasi pada arsitektur. Salah satu inovasi signifikan adalah Residual Neural Network (ResNet) yang diperkenalkan oleh Kaiming He et al. \parencite*{kaiminghe2015}. ResNet memperkenalkan konsep \emph{skip connection} yang memungkinkan model untuk belajar representasi yang lebih baik dari data. Hal ini memungkinkan model untuk dilatih dengan kedalaman yang lebih besar tanpa mengalami masalah \emph{vanishing gradient}.
+Perkembangan CNN semakin pesat dengan adanya inovasi pada arsitektur. Salah satu inovasi signifikan adalah \emph{Residual Neural Network} (ResNet) yang diperkenalkan oleh Kaiming He et al. \parencite*{kaiminghe2015}. ResNet memperkenalkan konsep \emph{skip connection} yang memungkinkan model untuk belajar representasi yang lebih baik dari data. Hal ini memungkinkan model untuk dilatih dengan kedalaman yang lebih besar tanpa mengalami masalah \emph{vanishing gradient}.
  
-Selain itu, metode modern seperti normalisasi batch (\emph{BatchNorm}) yang dikembangkan oleh Ioffe et al. \parencite*{ioffe2015} dan Szegedy et al. \parencite*{szegedy2015} telah menjadi standar dalam \emph{training} CNN. \emph{BatchNorm} membantu jaringan untuk melakukan konvergensi lebih cepat dengan menormalkan distribusi setiap batch selama pelatihan. Penggunaan konvolusi 1x1, seperti pada arsitektur \emph{Inception}, juga memperkenalkan cara baru untuk mengurangi jumlah parameter sambil mempertahankan kapasitas jaringan.
+Selain itu, metode modern seperti normalisasi \emph{batch} (\emph{BatchNorm}) yang dikembangkan oleh Ioffe et al. \parencite*{ioffe2015} dan Szegedy et al. \parencite*{szegedy2015} telah menjadi standar dalam \emph{training} CNN. \emph{BatchNorm} membantu jaringan untuk melakukan konvergensi lebih cepat dengan menormalkan distribusi setiap \emph{batch} selama pelatihan. Penggunaan konvolusi 1x1, seperti pada arsitektur \emph{Inception}, juga memperkenalkan cara baru untuk mengurangi jumlah parameter sambil mempertahankan kapasitas jaringan.
  
 Penerapan CNN telah meluas ke berbagai domain, termasuk deteksi objek, segmentasi citra, dan pengenalan pola. Dalam konteks penelitian ini, CNN digunakan untuk mendeteksi kendaraan overdimensi berdasarkan karakteristik visualnya. Pendekatan ini sesuai dengan studi sebelumnya yang menunjukkan kemampuan CNN dalam mengolah data visual dengan tingkat akurasi yang tinggi.
 \subsection{SSD (\emph{Single Shot MultiBox Detector})}
@@ -149,25 +148,22 @@ Selain itu, \emph{edge computing} juga membantu mengurangi beban jaringan dan \e
 Contoh implementasi edge computing yang digunakan dalam penelitian ini adalah Jetson Nano dan Beelink Gemini T34 yang berfungsi sebagai \emph{edge device} untuk menjalankan model deteksi objek secara \emph{real-time}.
 
 \subsubsection{Jetson Nano}
- \begin{figure}[H]
-     \centering
 
-     \includegraphics[scale=0.4]{gambar/bab2-jetson-nano.png}
- 
-     \caption{Jetson Nano Developer Kit}
-     \label{fig:jetsonnano}
+ \begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{gambar/bab2-jetson-nano.png}
+  \caption{Jetson Nano Developer Kit}
+  \label{fig:jetsonnano}
 \end{figure}
 
-Jetson Nano adalah perangkat komputasi keluaran NVIDIA yang didedikasikan dalam pengembangan \textit{machine lerarning} dan \emph{edge computing}. Jetson Nano memiliki kemampuan untuk dapat menjalankan beberapa neural networks secara paralel. Kemampuan ini memungkinkan Jetson Nano untuk digunakan dalam \textit{image classification}, \textit{object detection}, \textit{segmentation}, dan \textit{speech processing} \parencite{nvidiaJetsonNano}. Perangkat ini dapat menjadi solusi dalam menjalankan model \textit{machine learning} atau \textit{deep learning} pada perangkat portable dan hemat energi. 
+Jetson Nano adalah perangkat komputasi keluaran NVIDIA yang didedikasikan dalam pengembangan \textit{machine learning} dan \emph{edge computing}. Jetson Nano memiliki kemampuan untuk dapat menjalankan beberapa \emph{neural networks} secara paralel. Kemampuan ini memungkinkan Jetson Nano untuk digunakan dalam \textit{image classification}, \textit{object detection}, \textit{segmentation}, dan \textit{speech processing} \parencite{nvidiaJetsonNano}. Perangkat ini dapat menjadi solusi dalam menjalankan model \textit{machine learning} atau \textit{deep learning} pada perangkat portable dan hemat energi. 
 
 Perangkat ini dilengkapi dengan 128 NVIDIA CUDA \emph{cores}. Ditenagai oleh prosesor \emph{Quad-core ARM Cortex-A57 MPCore}, platform ini menyediakan fungsionalitas komputasi yang solid dengan memori 4 GB 64-bit LPDDR4 yang beroperasi pada 1600MHz, memberikan \emph{bandwidth} 25.6 GB/s. Untuk penyimpanan, Jetson Nano dilengkapi dengan 16 GB eMMC 5.1, yang memberikan ruang yang cukup untuk aplikasi dan data pengguna. Jetson Nano dapat mengkodekan video dengan kecepatan 250MP/sec, mendukung format seperti 1x 4K pada 30fps (HEVC), 2x 1080p pada 60fps (HEVC), dan sebagainya. Sementara itu, untuk decode video, perangkat ini menawarkan kemampuan hingga 500MP/sec, dengan dukungan untuk format seperti 1x 4K pada 60fps (HEVC) dan 2x 4K pada 30fps (HEVC). Jetson Nano juga dilengkapi dengan 12 jalur kamera (3x4 atau 4x2) MIPI CSI-2 D-PHY 1.1, yang mendukung kecepatan hingga 1.5 Gb/s per pasangan, memberikan fleksibilitas dalam pengembangan aplikasi berbasis kamera. Dalam hal konektivitas, perangkat ini menawarkan Gigabit Ethernet dan M.2 Key E, serta kemampuan tampilan melalui HDMI 2.0 dan eDP 1.4. Jetson Nano juga dilengkapi dengan 4x USB 3.0 dan USB 2.0 Micro-B, serta berbagai opsi konektivitas lainnya seperti GPIO, I2C, I2S, SPI, dan UART, semuanya dalam form factor mekanis 69.6 mm x 45 mm dengan konektor tepi 260-pin \parencite{nvidiaJetsonNano}.
 
 \subsubsection{Beelink Gemini T34}
  \begin{figure}[H]
      \centering
-
-     \includegraphics[scale=0.4]{gambar/bab2-beelink-gemini-t34.png}
- 
+     \includegraphics[scale=0.6]{gambar/bab2-beelink-gemini-t34.png}
      \caption{Beelink Gemini T34}
      \label{fig:beelinkgeminit34}
 \end{figure}
@@ -204,13 +200,13 @@ Keunggulan utama dari RESTful API adalah kemudahan penggunaan, fleksibilitas, da
 
 \subsection{Flutter}
 
-Flutter adalah \emph{framework} pengembangan aplikasi \emph{open-source} yang dikembangkan oleh Google \parencite*{google2024}. Flutter memungkinkan pengembang untuk membuat aplikasi mobile dengan antarmuka pengguna yang kaya dan responsif. Flutter menggunakan bahasa pemrograman Dart yang dikembangkan oleh Google sebagai bahasa utamanya.
+Flutter adalah \emph{framework} pengembangan aplikasi \emph{open-source} yang dikembangkan oleh \emph{Google} \parencite*{google2024}. Flutter memungkinkan pengembang untuk membuat aplikasi \emph{mobile} dengan antarmuka pengguna yang kaya dan responsif. Flutter menggunakan bahasa pemrograman Dart yang dikembangkan oleh Google sebagai bahasa utamanya.
 
-Keunggulan utama dari Flutter adalah kemampuannya untuk membuat aplikasi mobile yang konsisten di berbagai platform, termasuk Android dan iOS. Flutter menggunakan \emph{widget} sebagai komponen dasar untuk membangun antarmuka pengguna. \emph{Widget} Flutter bersifat deklaratif, yang berarti pengembang mendefinisikan bagaimana antarmuka pengguna harus terlihat berdasarkan kondisi saat ini.
+Keunggulan utama dari Flutter adalah kemampuannya untuk membuat aplikasi \emph{mobile} yang konsisten di berbagai platform, termasuk Android dan iOS. Flutter menggunakan \emph{widget} sebagai komponen dasar untuk membangun antarmuka pengguna. \emph{Widget} Flutter bersifat deklaratif, yang berarti pengembang mendefinisikan bagaimana antarmuka pengguna harus terlihat berdasarkan kondisi saat ini.
 
-Flutter juga menyediakan berbagai \emph{plugin} dan \emph{package} yang memperluas fungsionalitas aplikasi. Pengembang dapat menggunakan \emph{plugin} Flutter untuk mengakses fitur perangkat seperti kamera, lokasi, dan sensor. Selain itu, Flutter juga menyediakan \emph{package} untuk mengintegrasikan aplikasi dengan layanan \emph{cloud}, database, dan API eksternal.
+Flutter juga menyediakan berbagai \emph{plugin} dan \emph{package} yang memperluas fungsionalitas aplikasi. Pengembang dapat menggunakan \emph{plugin} Flutter untuk mengakses fitur perangkat seperti kamera, lokasi, dan sensor. Selain itu, Flutter juga menyediakan \emph{package} untuk mengintegrasikan aplikasi dengan layanan \emph{cloud}, \emph{database}, dan API eksternal.
 
-Dalam penelitian ini, Flutter digunakan sebagai platform pengembangan aplikasi mobile untuk menampilkan hasil deteksi objek secara \emph{real-time}. Aplikasi Flutter akan berkomunikasi dengan \emph{cloud} untuk menerima data deteksi objek dan menampilkannya dalam antarmuka pengguna yang responsif.
+Dalam penelitian ini, Flutter digunakan sebagai platform pengembangan aplikasi \emph{mobile} untuk menampilkan hasil deteksi objek secara \emph{real-time}. Aplikasi Flutter akan berkomunikasi dengan \emph{cloud} untuk menerima data deteksi objek dan menampilkannya dalam antarmuka pengguna yang responsif.
 
 % \subsection{Tunarungu} 
 % % \label{sec:gravitasi}

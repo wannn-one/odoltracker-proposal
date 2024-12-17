@@ -49,19 +49,19 @@ Adapun tugas akhir ini merupakan pengembangan dari teknologi visi komputer yang 
 
 Pada tahap ini, data citra yang diperoleh dari hasil pengambilan gambar secara manual menggunakan kamera di gerbang tol. Data citra tersebut akan digunakan sebagai data latih dan data uji dalam proses pelatihan model dan pengujian model. Data citra tersebut akan diolah dan diolah menggunakan teknik visi komputer untuk mendeteksi apakah kendaraan yang melintas adalah kendaraan yang \emph{overdimension} atau tidak.
 
-\subsection{Labelling Data}
+\subsection{\emph{Labelling} Data}
 
-Pada tahap ini, data citra yang telah diperoleh akan dilakukan labelling. Labelling data dilakukan dengan cara memberikan label pada data citra yang telah diperoleh. Label yang diberikan adalah label yang menunjukkan apakah kendaraan yang melintas adalah kendaraan yang \emph{overdimension} atau tidak.
+Pada tahap ini, data citra yang telah diperoleh akan dilakukan \emph{labelling}. \emph{Labelling} data dilakukan dengan cara memberikan label pada data citra yang telah diperoleh. Label yang diberikan adalah label yang menunjukkan apakah kendaraan yang melintas adalah kendaraan yang \emph{overdimension} atau tidak.
 
 \subsection{Praproses Data}
 
 Pada tahap ini, data citra yang telah dilabeli akan dilakukan praproses. Praproses data dilakukan dengan cara melakukan augmentasi data. Augmentasi data dilakukan dengan cara melakukan rotasi, pergeseran, dan perubahan warna pada data citra. Hal ini dilakukan untuk memperbanyak variasi data citra yang akan digunakan dalam proses pelatihan model.
 
-\subsection{Training Data}
+\subsection{\emph{Training} Data}
 
-Pada tahap ini, data citra yang telah dilabeli dan dipreproses akan dilakukan pelatihan model. Pelatihan model dilakukan dengan cara membagi data citra menjadi dua bagian, yaitu data latih dan data validasi. Data latih digunakan untuk melatih model sedangkan data validasi digunakan untuk menguji model. Model yang digunakan adalah model \emph{SSD MobileNetV2}.
+Pada tahap ini, data citra yang telah dilabeli dan dipreproses akan dilakukan \emph{training model}. \emph{Training model} dilakukan dengan cara membagi data citra menjadi dua bagian, yaitu data latih dan data validasi. Data latih digunakan untuk melatih model sedangkan data validasi digunakan untuk menguji model. Model yang digunakan adalah model \emph{SSD MobileNetV2}.
 
-\subsection{Deployment di \emph{Edge Device}}
+\subsection{\emph{Deployment} di \emph{Edge Device}}
 
 Pada tahap ini, model yang telah dilatih akan diimplementasikan pada \emph{Jetson Nano Developer Kit} dan \emph{Beelink Gemini T34}. Implementasi model dilakukan dengan cara mengubah model yang telah dilatih menjadi model yang dapat dijalankan pada \emph{Jetson Nano Developer Kit} dan \emph{Beelink Gemini T34}. Model yang diimplementasikan adalah model \emph{SSD MobileNetv2}.
 
@@ -71,7 +71,7 @@ Pada tahap ini, model yang telah diimplementasikan akan digunakan untuk mendetek
 
 \subsection{Penyimpanan Data ke \emph{Cloud}}
 
-Pada tahap ini, hasil deteksi yang telah dilakukan akan disimpan ke server cloud. Proses penyimpanan data dilakukan dengan cara mengirimkan data hasil deteksi ke database cloud. Data hasil deteksi yang disimpan yaitu:
+Pada tahap ini, hasil deteksi yang telah dilakukan akan disimpan ke \emph{server cloud}. Proses penyimpanan data dilakukan dengan cara mengirimkan data hasil deteksi ke \emph{database cloud}. Data hasil deteksi yang disimpan yaitu:
 
 \begin{itemize}[noitemsep,nolistsep]
   \setlength{\itemsep}{5pt}
@@ -80,7 +80,7 @@ Pada tahap ini, hasil deteksi yang telah dilakukan akan disimpan ke server cloud
   \item ID
   \item Jenis kendaraan
   \item Waktu deteksi
-  \item Overdimension atau tidak
+  \item \emph{Overdimension} atau tidak
   \item Gambar kendaraan
 \end{itemize}
 
@@ -99,11 +99,11 @@ Struktur basis data yang digunakan terdiri dari tiga tabel utama, yaitu:
 
 \begin{enumerate}[nolistsep,label=\textbf{\arabic*.}]
 
-  \item \textbf{Tabel User}: Tabel ini digunakan untuk menyimpan informasi pengguna sistem, seperti nama, email, kata sandi, dan peran pengguna (administrator atau operator). Struktur ini memungkinkan sistem untuk mengatur akses berdasarkan peran pengguna, sehingga keamanan dan tanggung jawab penggunaan sistem dapat terjaga.
-  \item \textbf{Tabel DetectionResult}: Tabel ini merupakan inti dari sistem, yang menyimpan informasi hasil deteksi kendaraan. Data yang dicatat meliputi jenis kendaraan, waktu deteksi, status overdimensi, serta jalur penyimpanan gambar kendaraan. Selain itu, tabel ini juga memiliki kolom untuk mencatat identitas pengguna yang memverifikasi hasil deteksi.
-  \item \textbf{Tabel DeliveryLog}: Tabel ini berfungsi mencatat log pengiriman data hasil deteksi ke cloud. Informasi yang disimpan meliputi waktu pengiriman, status pengiriman (berhasil atau gagal), dan keterangan tambahan, seperti pesan kesalahan jika pengiriman mengalami kegagalan. Tabel ini penting untuk melacak riwayat pengiriman dan mendukung analisis jika terjadi kendala teknis.
+  \item \textbf{Tabel \emph{User}}: Tabel ini digunakan untuk menyimpan informasi pengguna sistem, seperti nama, email, kata sandi, dan peran pengguna (administrator atau operator). Struktur ini memungkinkan sistem untuk mengatur akses berdasarkan peran pengguna, sehingga keamanan dan tanggung jawab penggunaan sistem dapat terjaga.
+  \item \textbf{Tabel \emph{DetectionResult}}: Tabel ini merupakan inti dari sistem, yang menyimpan informasi hasil deteksi kendaraan. Data yang dicatat meliputi jenis kendaraan, waktu deteksi, status overdimensi, serta jalur penyimpanan gambar kendaraan. Selain itu, tabel ini juga memiliki kolom untuk mencatat identitas pengguna yang memverifikasi hasil deteksi.
+  \item \textbf{Tabel \emph{DeliveryLog}}: Tabel ini berfungsi mencatat log pengiriman data hasil deteksi ke cloud. Informasi yang disimpan meliputi waktu pengiriman, status pengiriman (berhasil atau gagal), dan keterangan tambahan, seperti pesan kesalahan jika pengiriman mengalami kegagalan. Tabel ini penting untuk melacak riwayat pengiriman dan mendukung analisis jika terjadi kendala teknis.
 \end{enumerate}
 
 \subsection{Pengiriman Notifikasi ke \emph{Mobile Apps}}
 
-Pada tahap ini, hasil deteksi yang telah disimpan ke server cloud akan dikirimkan notifikasi ke aplikasi \emph{mobile}. Proses pengiriman notifikasi dilakukan dengan cara mengirimkan notifikasi ke aplikasi \emph{mobile} yang terhubung dengan \emph{server cloud}. Notifikasi yang dikirimkan berupa notifikasi apakah kendaraan yang melintas adalah kendaraan yang \emph{overdimension} atau tidak.
+Pada tahap ini, hasil deteksi yang telah disimpan ke \emph{server cloud} akan dikirimkan notifikasi ke aplikasi \emph{mobile}. Proses pengiriman notifikasi dilakukan dengan cara mengirimkan notifikasi ke aplikasi \emph{mobile} yang terhubung dengan \emph{server cloud}. Notifikasi yang dikirimkan berupa notifikasi apakah kendaraan yang melintas adalah kendaraan yang \emph{overdimension} atau tidak.
