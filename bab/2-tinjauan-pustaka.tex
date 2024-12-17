@@ -6,61 +6,201 @@
 
 \section{Hasil Penelitian Terdahulu}
 \label{sec:hasilpenelitianterdahulu}
-Adapun penulis mengambil beberapa penelitian terdahulu yang mengambil topik yang sama ataupun beririsan sebagai referensi, serta dasar pengembangan dan inovasi yang akan pada tugas akhir ini. Berikut adalah beberapa penelitian terdahulu yang diambil sebagai referensi:
+Penelitian ini mengambil referensi dari beberapa penelitian terdahulu dengan topik yang sama ataupun beririsan, serta dasar pengembangan dan inovasi yang akan pada penelitian ini. Berikut adalah beberapa penelitian terdahulu yang diambil sebagai referensi:
 
 \subsection{Deteksi Kendaraan Truk pada Video Menggunakan Metode Tiny-YOLOv4}
 \label{subsec:deteksikendaraantrukprismadika}
-Penelitian oleh Prismadika Yuniar et al. \parencite*{prismadika2023} mengkaji deteksi truk secara real-time dalam video pengamatan di jalan raya. Tantangan muncul karena truk memiliki dimensi serupa dengan bus dan struktur mekanis mirip pikap. Pada tahap awal, model YOLO asli hanya mampu mendeteksi bagian kepala dan bak truk tanpa memperhitungkan muatan. Oleh karena itu, dibuat custom dataset dengan bounding box untuk seluruh bagian truk beserta muatannya.
+Penelitian oleh Prismadika Yuniar et al. \parencite*{prismadika2023} mengkaji deteksi truk secara \emph{real-time} dalam video pengamatan di jalan raya. Tantangan muncul karena truk memiliki dimensi serupa dengan bus dan struktur mekanis mirip pikap. Pada tahap awal, model YOLO asli hanya mampu mendeteksi bagian kepala dan bak truk tanpa memperhitungkan muatan. Oleh karena itu, dibuat custom \emph{dataset} dengan bounding box untuk seluruh bagian truk beserta muatannya.
 
 Tiny-YOLOv4 dipilih karena lebih ringan dan kompatibel dengan perangkat beragam. Pengujian pada tiga perangkat menunjukkan bahwa Laptop Acer E5 mencapai akurasi 98,2\% pada 13 FPS, Laptop Lenovo Legion 5 98\% pada 28 FPS, dan PC Dell Precision 3640 Tower 97,5\% pada 38 FPS. 
 
-Hasil yang didapatkan yaitu FPS yang lebih tinggi cenderung menurunkan akurasi, dan perangkat dengan CPU di atas 3.0 GHz, RAM minimal 16 GB, dan GPU lebih dari 4 GB mampu menjalankan deteksi secara real-time dengan baik.
+Hasil yang didapatkan yaitu FPS yang lebih tinggi cenderung menurunkan akurasi, dan perangkat dengan CPU di atas 3.0 GHz, RAM minimal 16 GB, dan GPU lebih dari 4 GB mampu menjalankan deteksi secara \emph{real-time} dengan baik.
 
-\subsection{Sistem Deteksi Kendaraan Overdimension secara Real-time menggunakan Deep Learning di Jalan Raya}
+\subsection{Sistem Deteksi Kendaraan \emph{Overdimension} secara \emph{Real-time} menggunakan \emph{Deep Learning} di Jalan Raya}
 \label{subsec:deteksikendaraanoverdimensionhamayan}
-Penelitian ini dilakukan oleh Ahmad Hamayan Nabih \parencite*{hamayan2024}. Penelitian ini bertujuan untuk mengembangkan sistem deteksi kendaraan overdimension secara real-time menggunakan deep learning di jalan raya. Sistem ini menggunakan model YOLOv8 yang telah dimodifikasi untuk mendeteksi kendaraan overdimension. Dataset yang digunakan adalah dataset yang telah diambil dari jalan raya di Indonesia. Variasi yang digunakan yaitu variasi akurasi pada berbagai macam perangkat dan model YOLOv8.
+Penelitian ini dilakukan oleh Ahmad Hamayan Nabih \parencite*{hamayan2024}. Penelitian ini bertujuan untuk mengembangkan sistem deteksi kendaraan overdimension secara \emph{real-time} menggunakan deep learning di jalan raya. Sistem ini menggunakan model YOLOv8 yang telah dimodifikasi untuk mendeteksi kendaraan overdimension. \emph{Dataset} yang digunakan adalah \emph{dataset} yang telah diambil dari jalan raya di Indonesia. Variasi yang digunakan yaitu variasi akurasi pada berbagai macam perangkat dan model YOLOv8.
 
 Variasi perangkat meliputi PC dengan External VGA NVIDIA GeForce GTX 1650Ti, Laptop tanpa External VGA, dan Intel NUC i5 Gen 11. Hasil yang didapatkan yaitu PC dengan External VGA NVIDIA GeForce GTX 1650Ti mampu mendeteksi kendaraan overdimension dengan akurasi 85\% - 90\% pada 33 FPS - 63 FPS, Laptop tanpa External VGA dengan akurasi 87\% - 92\% pada 7 FPS - 10 FPS, dan Intel NUC i5 Gen 11 dengan akurasi 79\% - 90\% pada 2 FPS. Sedangkan variasi model YOLOv8 meliputi YOLOv8n dan YOLOv8s, dimana YOLOv8n di-\emph{training} dengan 50 \emph{epoch} dan YOLOv8s di-\emph{training} dengan 75 \emph{epoch}.
 
 Kesimpulan yang didapatkan yaitu model YOLOv8n lebih baik dari segi FPS dibandingkan dengan YOLOv8s namun memiliki akurasi yang lebih rendah. Sedangkan model pembandingnya, yaitu YOLOv8s memiliki akurasi yang lebih tinggi namun FPS yang lebih rendah. Kemudian juga ditemukan bahwa perangkat dengan spesifikasi yang lebih tinggi mampu mendeteksi kendaraan overdimension dengan akurasi yang lebih tinggi dan FPS yang lebih tinggi.
 
-\subsection{Implementasi Sistem Penghitung Kendaraan Otomatis Berbasis Computer Vision}
+\subsection{Implementasi Sistem Penghitung Kendaraan Otomatis Berbasis \emph{Computer Vision}}
 \label{subsec:implementasisistemhitungkendaraan}
-Penelitian ini dilakukan oleh Dolly Indra et al. \parencite*{dolly2023}. Penelitian ini bertujuan untuk mengembangkan sistem penghitung kendaraan otomatis di tempat pencucian kendaraan. Sistem ini menggunakan Raspberry Pi 4 sebagai \emph{edge device} dan model SSD MobileNet V2 sebagai model deteksi. Sistem ini mampu menghitung jumlah kendaraan yang masuk dan keluar dari tempat pencucian kendaraan secara realtime yang terhubung dengan aplikasi \emph{mobile}.
+Penelitian ini dilakukan oleh Dolly Indra et al. \parencite*{dolly2023}. Penelitian ini bertujuan untuk mengembangkan sistem penghitung kendaraan otomatis di tempat pencucian kendaraan. Sistem ini menggunakan Raspberry Pi 4 sebagai \emph{edge device} dan model SSD MobileNet V2 sebagai model deteksi. Sistem ini mampu menghitung jumlah kendaraan yang masuk dan keluar dari tempat pencucian kendaraan secara \emph{real-time} yang terhubung dengan aplikasi \emph{mobile}.
 
 Hasil yang didapatkan yaitu sistem otomatis mampu mendeteksi kendaraan mobil dan motor dengan rata-rata tingkat akurasi sebesar 46,6 \% dan aplikasi yang terdapat pada \emph{smartphone} mampu menghitung jumlah kendaraan yang masuk dan keluar dari tempat pencucian kendaraan.
 
 \section{Teori/Konsep Dasar}
 \label{sec:teorikonsepdasar}
-Adapun berikut adalah teori atau konsep dasar yang digunakan penulis sebagai landasan teoritis dalam pelaksanaan tugas akhir ini.
+ Berikut adalah teori atau konsep dasar sebagai landasan teoritis dalam pelaksanaan penelitian ini.
+ 
+\subsection{\emph{Neural Network}}
+\emph{Neural Network} (NN), atau jaringan saraf, adalah fondasi dari banyak model \emph{deep learning}, termasuk CNN. Bagian ini akan membahas konsep dasar NN mulai dari perceptron, fungsi aktivasi, mekanisme \emph{feed forward}, \emph{backpropagation}, \emph{loss function}, dan \emph{optimizer}.
 
-\subsection{CNN (\emph{Convolutional Neural Network})}
-\emph{Convolutional Neural Networks} (CNN) merupakan salah satu arsitektur deep learning yang paling banyak digunakan dalam pengolahan citra. CNN pertama kali diperkenalkan oleh Yan LeCun et al. \parencite*{yannlecun1998} dalam penelitian tentang pengenalan tulisan tangan menggunakan LeNet-5. Model ini menggabungkan operasi konvolusi, \emph{subsampling} (\emph{pooling}), dan \emph{fully connected layers} untuk mengekstraksi fitur secara hierarkis dari gambar input.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.6]{gambar/bab2-basic-nn.jpeg}
+  \caption{Diagram sederhana dari \emph{Neural Network}}
+  \label{fig:basic_nn}
+\end{figure}
 
+\subsubsection{Perceptron}
+\emph{Perceptron} merupakan dasar dari NN, yang diperkenalkan oleh Frank Rosenblatt pada tahun 1958 \parencite*{rosenblatt1958perceptron}. \emph{Perceptron} adalah model jaringan saraf tiruan yang paling sederhana, yang memodelkan sebuah neuron dalam otak. Struktur dasar perceptron terdiri dari input \( x_1, x_2, \dots, x_n \), \emph{weights} (bobot) \( w_1, w_2, \dots, w_n \), dan bias \( b \). Output dari perceptron dihitung menggunakan rumus:
+\[ y = f(w \cdot x + b) \]
+dimana \( f \) adalah fungsi aktivasi, \( w \cdot x \) adalah \emph{dot product} antara vektor bobot dan vektor input, dan \( b \) adalah bias.
+
+ 
+ \subsubsection{\emph{Activation Function}}
+ \emph{Activation function} menentukan output dari sebuah neuron berdasarkan input total yang diterima. Beberapa fungsi aktivasi yang sering digunakan adalah:
+ \begin{itemize}
+   \item Sigmoid: \( \sigma(x) = \frac{1}{1 + e^{-x}} \). Fungsi ini menghasilkan output dalam rentang \( (0, 1) \), yang berguna untuk tugas klasifikasi biner.
+   \item Tanh: \( \tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}} \). Fungsi ini menghasilkan output dalam rentang \( (-1, 1) \), yang membantu dalam mengatasi masalah \emph{vanishing gradient}. Yaitu ketika nilai input yang besar atau kecil menyebabkan gradien yang sangat kecil.
+   \item ReLU (Rectified Linear Unit): \( ReLU(x) = \max(0, x) \). Fungsi ini menghasilkan output \( 0 \) jika input \( x \leq 0 \) dan \( x \) jika \( x > 0 \). ReLU adalah fungsi aktivasi yang paling umum digunakan dalam arsitektur NN modern karena sederhana dan efektif.
+ \end{itemize}
+
+ Berikut beberapa grafik dari \emph{activation function} yang disebutkan di atas.
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.4]{gambar/bab2-grafik-sigmoid.png}
+    \caption{Grafik \emph{Activation function Sigmoid}}
+    \label{fig:sigmoid_function}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{gambar/bab2-grafik-tanh.png}
+    \caption{Grafik \emph{Activation function Tanh}}
+    \label{fig:tanh_function}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{gambar/bab2-grafik-relu.png}
+    \caption{Grafik \emph{Activation function ReLU}}
+    \label{fig:relu_function}
+  \end{figure}
+ 
+ \subsubsection{\emph{Feed Forward}}
+ Mekanisme \emph{feed forward} adalah proses pengiriman input melalui lapisan-lapisan dari NN untuk mendapatkan output. Setiap neuron dalam lapisan menerima input dari semua neuron di lapisan sebelumnya, mengaplikasikan bobot dan bias, dan menghasilkan output menggunakan fungsi aktivasi.
+ 
+ \subsubsection{\emph{Backpropagation}}
+ \emph{Backpropagation} adalah metode yang digunakan untuk memperbarui bobot jaringan dengan cara mengoptimalkan fungsi kerugian. Proses ini melibatkan penghitungan gradien fungsi kerugian terhadap setiap bobot di jaringan dengan menggunakan aturan rantai, dan secara iteratif mengatur ulang bobot untuk meminimalkan \emph{loss}.
+ 
+ \begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.6]{gambar/bab2-ff-backprop.png}
+  \caption{Perbedaan antara \emph{Feed Forward} dan \emph{Backpropagation}}
+  \label{fig:ff_backprop}
+\end{figure}
+
+ \subsubsection{\emph{Loss Function} dan \emph{Optimizer}}
+ \emph{Loss function} mengukur seberapa baik model NN melakukan prediksi dibandingkan dengan nilai sebenarnya. \emph{Loss function} yang umum meliputi:
+ \begin{itemize}
+   \item \textbf{Gradient Descent}: Metode optimisasi yang digunakan untuk meminimalkan fungsi kerugian dengan mengupdate bobot jaringan berdasarkan gradien fungsi kerugian.
+   \item \textbf{Stochastic Gradient Descent (SGD)}: Versi sederhana dari \emph{Gradient Descent} yang memperbarui bobot jaringan berdasarkan gradien dari satu sampel data.
+   \item \textbf{Momentum}: Metode optimisasi yang membantu percepatan konvergensi dengan menambahkan momentum pada proses \emph{Gradient Descent}.
+   \item \textbf{RMSprop}: Metode optimisasi yang menyesuaikan laju pembelajaran untuk setiap parameter berdasarkan gradien rata-rata kuadrat sebelumnya.
+   \item \textbf{Adam}: Algoritma optimisasi yang menggabungkan konsep dari \emph{Momentum} dan \emph{RMSprop} untuk memperbarui bobot jaringan secara adaptif.
+ \end{itemize}
+ 
+ Optimisasi adalah proses mencari parameter model yang meminimalkan fungsi kerugian. Algoritma optimisasi yang sering digunakan antara lain Stochastic Gradient Descent (SGD), Adam, dan RMSprop. Adapun pada penelitian ini, digunakan algoritma Adam sebagai \emph{optimizer} untuk memperbarui bobot jaringan karena kemampuannya dalam menyesuaikan laju pembelajaran secara adaptif.
+ 
+ \subsubsection{CNN (\emph{Convolutional Neural Network})}
+ CNN (\emph{Convolutional Neural Networks}) memperluas konsep NN dengan memasukkan lapisan konvolusi, yang menggunakan filter untuk mengekstraksi fitur spatial dari data input. Berikut merupakan beberapa konsep dasar dalam CNN:
+ \begin{itemize}
+   \item \textbf{\emph{Convolutional Layer}}: Menggunakan filter atau \emph{kernel} yang 'meluncur' di atas gambar untuk menghasilkan \emph{feature map}.
+   \item \textbf{\emph{Stride}}: Jumlah piksel yang dilewati filter pada setiap gerakan. Stride yang lebih besar menghasilkan \emph{feature map} yang lebih kecil.
+   \item \textbf{\emph{Padding}}: Penambahan piksel di sekitar input untuk memungkinkan filter beroperasi di tepi gambar.
+   \item \textbf{\emph{Pooling Layer}} (Subsampling): Mengurangi dimensi spatial dari \emph{feature map} untuk mengurangi jumlah parameter dan komputasi. Contohnya adalah \emph{max pooling} dan \emph{average pooling}.
+   \item \textbf{\emph{Fully Connected Layer}}: Lapisan di mana setiap neuron terhubung ke semua neuron di lapisan sebelumnya, biasanya digunakan di akhir jaringan untuk mengklasifikasikan fitur yang diekstraksi oleh lapisan konvolusi.
+ \end{itemize} 
+
+ CNN merupakan salah satu arsitektur deep learning yang paling banyak digunakan dalam pengolahan citra. CNN pertama kali diperkenalkan oleh Yan LeCun et al. \parencite*{yannlecun1998} dalam penelitian tentang pengenalan tulisan tangan menggunakan LeNet-5. Model ini menggabungkan operasi konvolusi, \emph{subsampling} (\emph{pooling}), dan \emph{fully connected layers} untuk mengekstraksi fitur secara hierarkis dari gambar input.
+ 
 Perkembangan CNN semakin pesat dengan adanya inovasi pada arsitektur. Salah satu inovasi signifikan adalah Residual Neural Network (ResNet) yang diperkenalkan oleh Kaiming He et al. \parencite*{kaiminghe2015}. ResNet memperkenalkan konsep \emph{skip connection} yang memungkinkan model untuk belajar representasi yang lebih baik dari data. Hal ini memungkinkan model untuk dilatih dengan kedalaman yang lebih besar tanpa mengalami masalah \emph{vanishing gradient}.
-
-Selain itu, metode modern seperti normalisasi batch (\emph{BatchNorm}) yang dikembangkan oleh Ioffe et al. \parencite*{ioffe2015} dan Szegedy et al. \parencite*{szegedy2015} telah menjadi standar dalam pelatihan CNN. \emph{BatchNorm} membantu jaringan untuk melakukan konvergensi lebih cepat dengan menormalkan distribusi setiap batch selama pelatihan. Penggunaan konvolusi 1x1, seperti pada arsitektur \emph{Inception}, juga memperkenalkan cara baru untuk mengurangi jumlah parameter sambil mempertahankan kapasitas jaringan.
-
+ 
+Selain itu, metode modern seperti normalisasi batch (\emph{BatchNorm}) yang dikembangkan oleh Ioffe et al. \parencite*{ioffe2015} dan Szegedy et al. \parencite*{szegedy2015} telah menjadi standar dalam \emph{training} CNN. \emph{BatchNorm} membantu jaringan untuk melakukan konvergensi lebih cepat dengan menormalkan distribusi setiap batch selama pelatihan. Penggunaan konvolusi 1x1, seperti pada arsitektur \emph{Inception}, juga memperkenalkan cara baru untuk mengurangi jumlah parameter sambil mempertahankan kapasitas jaringan.
+ 
 Penerapan CNN telah meluas ke berbagai domain, termasuk deteksi objek, segmentasi citra, dan pengenalan pola. Dalam konteks penelitian ini, CNN digunakan untuk mendeteksi kendaraan overdimensi berdasarkan karakteristik visualnya. Pendekatan ini sesuai dengan studi sebelumnya yang menunjukkan kemampuan CNN dalam mengolah data visual dengan tingkat akurasi yang tinggi.
-
 \subsection{SSD (\emph{Single Shot MultiBox Detector})}
 
 \emph{Single Shot MultiBox Detector} (SSD) adalah arsitektur deteksi objek yang dikembangkan oleh Liu et al. \parencite*{liu2016}. SSD memperkenalkan pendekatan \emph{single shot} yang memungkinkan model untuk melakukan deteksi objek dan klasifikasi dalam satu langkah. Hal ini berbeda dengan pendekatan \emph{two-stage} seperti Faster R-CNN yang memerlukan dua tahap untuk deteksi objek.
 
-SSD menggunakan \emph{multi-scale feature maps} untuk mendeteksi objek pada berbagai skala. Arsitektur ini terdiri dari \emph{base network} (biasanya menggunakan arsitektur VGG16 atau ResNet) yang diikuti oleh beberapa lapisan konvolusi untuk menghasilkan \emph{feature maps} pada berbagai resolusi. Setiap lapisan \emph{feature map} digunakan untuk memprediksi kotak pembatas (\emph{bounding box}) dan kelas objek yang terdapat dalam gambar.
+SSD menggunakan \emph{multi-scale feature maps} untuk mendeteksi objek pada berbagai skala. Arsitektur ini terdiri dari \emph{base network} (biasanya menggunakan arsitektur VGG16 atau ResNet) yang diikuti oleh beberapa lapisan konvolusi untuk menghasilkan \emph{feature maps} pada berbagai resolusi. Setiap lapisan \emph{feature map} digunakan untuk memprediksi \emph{bounding box} dan kelas objek yang terdapat dalam gambar.
 
-SSD telah terbukti efektif dalam deteksi objek pada berbagai dataset, termasuk PASCAL VOC dan COCO. Keunggulan utama SSD adalah kemampuannya untuk melakukan deteksi objek secara cepat dan akurat dalam satu langkah. Dalam konteks penelitian ini, SSD digunakan sebagai model deteksi untuk mengidentifikasi kendaraan overdimensi pada video pengamatan jalan raya.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.36]{gambar/bab2-arsitektur-ssd.png}
+  \caption{Arsitektur SSD}
+  \label{fig:arsitektur_ssd}
+\end{figure}
 
-\subsection{Edge Computing}
+SSD telah terbukti efektif dalam deteksi objek pada berbagai \emph{dataset}, termasuk PASCAL VOC dan COCO. Keunggulan utama SSD adalah kemampuannya untuk melakukan deteksi objek secara cepat dan akurat dalam satu langkah. Dalam penelitian ini, SSD digunakan sebagai model deteksi untuk mengidentifikasi kendaraan overdimensi pada video pengamatan jalan raya.
 
-Edge computing adalah paradigma komputasi yang memungkinkan pemrosesan data dilakukan di dekat sumber data, seperti perangkat IoT atau sensor. Hal ini bertentangan dengan komputasi tradisional yang memerlukan pengiriman data ke pusat data atau cloud untuk diproses. Edge computing memungkinkan pemrosesan data yang lebih cepat, responsif, dan efisien dengan memanfaatkan sumber daya lokal.
+\subsection{\emph{Edge Computing}}
 
-Keuntungan utama dari edge computing adalah kemampuannya untuk mengurangi latensi dan mempercepat respons sistem \parencite*{aws2024}. Dengan melakukan pemrosesan data di dekat sumber data, edge computing memungkinkan aplikasi untuk merespons lebih cepat terhadap perubahan kondisi lingkungan. Hal ini sangat penting dalam konteks aplikasi real-time seperti deteksi objek pada video pengamatan jalan raya.
+\emph{Edge computing} adalah paradigma komputasi yang memungkinkan pemrosesan data dilakukan di dekat sumber data, seperti perangkat \emph{IoT} (\emph{Internet of Things}) atau sensor. Hal ini bertentangan dengan komputasi tradisional yang memerlukan pengiriman data ke pusat data atau cloud untuk diproses. \emph{Edge computing} memungkinkan pemrosesan data yang lebih cepat, responsif, dan efisien dengan memanfaatkan sumber daya lokal.
 
-Selain itu, edge computing juga membantu mengurangi beban jaringan dan cloud dengan melakukan pemrosesan data secara lokal. Hal ini dapat mengurangi biaya operasional dan meningkatkan efisiensi sistem secara keseluruhan. Dalam konteks penelitian ini, edge computing digunakan untuk menjalankan model deteksi objek secara real-time pada perangkat lokal tanpa memerlukan koneksi internet. 
+Keuntungan utama dari \emph{edge computing} adalah kemampuannya untuk mengurangi latensi dan mempercepat respons sistem \parencite*{aws2024}. Dengan melakukan pemrosesan data di dekat sumber data, \emph{edge computing} memungkinkan aplikasi untuk merespons lebih cepat terhadap perubahan kondisi lingkungan. Hal ini sangat penting dalam konteks aplikasi \emph{real-time} seperti deteksi objek pada video pengamatan jalan raya.
 
-Contoh implementasi edge computing yang digunakan dalam penelitian ini adalah Jetson Nano dan Beelink Gemini T34  yang berfungsi sebagai edge device untuk menjalankan model deteksi objek secara real-time.
+Selain itu, \emph{edge computing} juga membantu mengurangi beban jaringan dan \emph{cloud} dengan melakukan pemrosesan data secara lokal. Hal ini dapat mengurangi biaya operasional dan meningkatkan efisiensi sistem secara keseluruhan. Dalam konteks penelitian ini, \emph{edge computing} digunakan untuk menjalankan model deteksi objek secara \emph{real-time} pada perangkat lokal tanpa memerlukan koneksi internet. 
 
+Contoh implementasi edge computing yang digunakan dalam penelitian ini adalah Jetson Nano dan Beelink Gemini T34 yang berfungsi sebagai \emph{edge device} untuk menjalankan model deteksi objek secara \emph{real-time}.
+
+\subsubsection{Jetson Nano}
+ \begin{figure}[H]
+     \centering
+
+     \includegraphics[scale=0.4]{gambar/bab2-jetson-nano.png}
+ 
+     \caption{Jetson Nano Developer Kit}
+     \label{fig:jetsonnano}
+\end{figure}
+
+Jetson Nano adalah perangkat komputasi keluaran NVIDIA yang didedikasikan dalam pengembangan \textit{machine lerarning} dan \emph{edge computing}. Jetson Nano memiliki kemampuan untuk dapat menjalankan beberapa neural networks secara paralel. Kemampuan ini memungkinkan Jetson Nano untuk digunakan dalam \textit{image classification}, \textit{object detection}, \textit{segmentation}, dan \textit{speech processing} \parencite{nvidiaJetsonNano}. Perangkat ini dapat menjadi solusi dalam menjalankan model \textit{machine learning} atau \textit{deep learning} pada perangkat portable dan hemat energi. 
+
+Perangkat ini dilengkapi dengan 128 NVIDIA CUDA \emph{cores}. Ditenagai oleh prosesor \emph{Quad-core ARM Cortex-A57 MPCore}, platform ini menyediakan fungsionalitas komputasi yang solid dengan memori 4 GB 64-bit LPDDR4 yang beroperasi pada 1600MHz, memberikan \emph{bandwidth} 25.6 GB/s. Untuk penyimpanan, Jetson Nano dilengkapi dengan 16 GB eMMC 5.1, yang memberikan ruang yang cukup untuk aplikasi dan data pengguna. Jetson Nano dapat mengkodekan video dengan kecepatan 250MP/sec, mendukung format seperti 1x 4K pada 30fps (HEVC), 2x 1080p pada 60fps (HEVC), dan sebagainya. Sementara itu, untuk decode video, perangkat ini menawarkan kemampuan hingga 500MP/sec, dengan dukungan untuk format seperti 1x 4K pada 60fps (HEVC) dan 2x 4K pada 30fps (HEVC). Jetson Nano juga dilengkapi dengan 12 jalur kamera (3x4 atau 4x2) MIPI CSI-2 D-PHY 1.1, yang mendukung kecepatan hingga 1.5 Gb/s per pasangan, memberikan fleksibilitas dalam pengembangan aplikasi berbasis kamera. Dalam hal konektivitas, perangkat ini menawarkan Gigabit Ethernet dan M.2 Key E, serta kemampuan tampilan melalui HDMI 2.0 dan eDP 1.4. Jetson Nano juga dilengkapi dengan 4x USB 3.0 dan USB 2.0 Micro-B, serta berbagai opsi konektivitas lainnya seperti GPIO, I2C, I2S, SPI, dan UART, semuanya dalam form factor mekanis 69.6 mm x 45 mm dengan konektor tepi 260-pin \parencite{nvidiaJetsonNano}.
+
+\subsubsection{Beelink Gemini T34}
+ \begin{figure}[H]
+     \centering
+
+     \includegraphics[scale=0.4]{gambar/bab2-beelink-gemini-t34.png}
+ 
+     \caption{Beelink Gemini T34}
+     \label{fig:beelinkgeminit34}
+\end{figure}
+
+Beelink Gemini T34 adalah mini PC yang dilengkapi dengan prosesor Intel Apollo Lake N3450. Prosesor ini memiliki 4 core dan 4 thread dengan kecepatan hingga 2.2 GHz. Beelink Gemini T34 juga dilengkapi dengan Intel HD Graphics 500 yang mendukung resolusi hingga 4K. Mini PC ini memiliki RAM 8 GB LPDDR3 dan penyimpanan 128 GB eMMC SSD. Beelink Gemini T34 memiliki berbagai port konektivitas seperti HDMI, USB 3.0, USB 2.0, dan Gigabit Ethernet. Mini PC ini juga dilengkapi dengan konektivitas Wi-Fi 5 dan Bluetooth 4.0. Beelink Gemini T34 memiliki dimensi 11.9 cm x 11.9 cm x 1.79 cm dan berat 0.4 kg, sehingga mudah dipindahkan dan ditempatkan di berbagai lokasi. \parencite*{beelinkGeminiT34}
+
+Beelink Gemini T34 dapat digunakan sebagai \emph{edge device} untuk menjalankan model deteksi objek secara \emph{real-time}. Mini PC ini memiliki performa yang cukup untuk menjalankan aplikasi deteksi objek dengan akurasi tinggi dan latensi rendah. Dengan konektivitas Wi-Fi dan Bluetooth, Beelink Gemini T34 dapat terhubung ke jaringan lokal dan perangkat lain untuk mentransfer data deteksi objek. Dengan demikian, Beelink Gemini T34 merupakan solusi yang ideal untuk implementasi \emph{edge computing} dalam deteksi objek pada video pengamatan jalan raya.
+
+\subsection{MQTT (\emph{Message Queuing Telemetry Transport})}
+
+MQTT (\emph{Message Queuing Telemetry Transport}) adalah protokol komunikasi yang ringan dan efisien untuk pertukaran pesan antara perangkat. MQTT dirancang untuk digunakan dalam kondisi jaringan yang tidak stabil atau berkapasitas rendah, seperti pada perangkat IoT atau \emph{edge device}.
+
+MQTT menggunakan model \emph{publish-subscribe} yang memungkinkan perangkat untuk berkomunikasi secara asinkron. Dalam model ini, perangkat yang mengirim pesan disebut \emph{publisher}, sedangkan perangkat yang menerima pesan disebut \emph{subscriber}. Pesan dikirim ke topik tertentu dan dapat diterima oleh satu atau lebih \emph{subscriber} yang berlangganan topik tersebut.
+
+Keunggulan utama dari MQTT adalah kemampuannya untuk mengirim pesan secara efisien dan andal di berbagai kondisi jaringan. MQTT menggunakan protokol TCP/IP yang ringan dan memiliki overhead yang rendah, sehingga cocok untuk digunakan pada perangkat dengan sumber daya terbatas. Selain itu, MQTT juga mendukung koneksi yang tahan lama dan \emph{quality of service} (QoS) yang dapat disesuaikan.
+
+Dalam penelitian ini, MQTT digunakan sebagai protokol komunikasi antara \emph{edge device} dan \emph{cloud} untuk mentransfer data deteksi objek secara \emph{real-time}. MQTT memungkinkan perangkat untuk berkomunikasi secara efisien dan responsif tanpa memerlukan koneksi internet yang stabil. \parencite*{mqtts2008}
+
+\subsection{RESTful API}
+
+RESTful API (\emph{Representational State Transfer Application Programming Interface}) adalah arsitektur desain yang digunakan untuk membangun layanan web yang ringan, fleksibel, dan mudah diakses. RESTful API menggunakan prinsip REST yang memisahkan antara data dan tampilan, serta memanfaatkan metode HTTP untuk berkomunikasi antara klien dan server.
+
+RESTful API menggunakan 4 metode HTTP utama untuk berinteraksi dengan \emph{resource}:
+\begin{itemize}
+  \item \textbf{GET}: Mengambil data dari \emph{resource}.
+  \item \textbf{POST}: Membuat data baru di \emph{resource}.
+  \item \textbf{PUT}: Memperbarui data yang ada di \emph{resource}.
+  \item \textbf{DELETE}: Menghapus data dari \emph{resource}.
+\end{itemize}
+
+RESTful API menggunakan URI (\emph{Uniform Resource Identifier}) untuk mengidentifikasi sumber daya yang diakses dan format data yang diinginkan. Data dikirimkan dalam format yang umum seperti JSON atau XML untuk memudahkan pertukaran data antara klien dan server. \parencite*{restapi2016}
+
+Keunggulan utama dari RESTful API adalah kemudahan penggunaan, fleksibilitas, dan skalabilitas. RESTful API memungkinkan pengembang untuk membangun layanan web yang dapat diakses dari berbagai platform dan bahasa pemrograman. Dalam penelitian ini, RESTful API digunakan untuk mengintegrasikan antara aplikasi Flutter dengan \emph{cloud} untuk mentransfer data deteksi objek secara \emph{real-time}.
 
 \subsection{Flutter}
 
@@ -68,9 +208,9 @@ Flutter adalah \emph{framework} pengembangan aplikasi \emph{open-source} yang di
 
 Keunggulan utama dari Flutter adalah kemampuannya untuk membuat aplikasi mobile yang konsisten di berbagai platform, termasuk Android dan iOS. Flutter menggunakan \emph{widget} sebagai komponen dasar untuk membangun antarmuka pengguna. \emph{Widget} Flutter bersifat deklaratif, yang berarti pengembang mendefinisikan bagaimana antarmuka pengguna harus terlihat berdasarkan kondisi saat ini.
 
-Flutter juga menyediakan berbagai \emph{plugin} dan \emph{package} yang memperluas fungsionalitas aplikasi. Pengembang dapat menggunakan \emph{plugin} Flutter untuk mengakses fitur perangkat seperti kamera, lokasi, dan sensor. Selain itu, Flutter juga menyediakan \emph{package} untuk mengintegrasikan aplikasi dengan layanan cloud, database, dan API eksternal.
+Flutter juga menyediakan berbagai \emph{plugin} dan \emph{package} yang memperluas fungsionalitas aplikasi. Pengembang dapat menggunakan \emph{plugin} Flutter untuk mengakses fitur perangkat seperti kamera, lokasi, dan sensor. Selain itu, Flutter juga menyediakan \emph{package} untuk mengintegrasikan aplikasi dengan layanan \emph{cloud}, database, dan API eksternal.
 
-Dalam konteks penelitian ini, Flutter digunakan sebagai platform pengembangan aplikasi mobile untuk menampilkan hasil deteksi objek secara real-time. Aplikasi Flutter akan berkomunikasi dengan edge device untuk menerima data deteksi objek dan menampilkannya dalam antarmuka pengguna yang responsif.
+Dalam penelitian ini, Flutter digunakan sebagai platform pengembangan aplikasi mobile untuk menampilkan hasil deteksi objek secara \emph{real-time}. Aplikasi Flutter akan berkomunikasi dengan \emph{cloud} untuk menerima data deteksi objek dan menampilkannya dalam antarmuka pengguna yang responsif.
 
 % \subsection{Tunarungu} 
 % % \label{sec:gravitasi}
@@ -188,21 +328,9 @@ Dalam konteks penelitian ini, Flutter digunakan sebagai platform pengembangan ap
 
 % Intel \emph{Next Unit Computing} (NUC) merupakan komputer \emph{barebone} dengan ukuran kecil yang dirancang oleh Intel. Intel NUC merupakan perangkat yang berfokus dalam menyediakan komputasi kuat dalam ukuran yang praktis dan dapat melayani berbagai kebutuhan pengguna, mulai dari bermain \emph{game}, bisnis, hingga menjalankan aplikasi kompleks. Intel NUC secara resmi memperkenalkan perangkat ini pada tahun 2012 dan dipasarkan secara umum pada awal tahun 2013 \parencite{IntelNUC2020}. Adapun seri pertama dari Intel NUC memiliki CPU Sandy Bridger berbasis Celeron. Intel NUC telah berkembang hingga generasi ke-12 bernama Dragon Canyon yang dilengkapi dengan CPU Intel generasi ke-12 dan PCI Express Gen 5 \parencite{Halfacree2013}.
 
-% Intel NUC 11 merupakan perangkat Intel yang dirilis pada 13 Januari 2021 dengan kode nama Phantom Canyon. Salah satu model yang cukup banyak digunakan adalah Intel NUC 11 Performance Kit model NUC11PAHi7. Inti dari perangkat ini dilengkapi dengan prossesor Intel Core i7-1165G7. Prossesor ini memiliki quad-core yang memiliki kecepatan dasar 2.8 GHz dan dapat meningkat hingga 4.7 GHz.  Prossesor ini didukung oleh kartu grafis Iris XE yang menawarkan peningkatan kinerja grafis yang substansial dibandingkan dengan generasi sebelumnya. Hal ini memudahkan perangkat dalam menjalankan tugas mulai dari pengeditan video hingga bermain \emph{game}. Dari segi memori, Intel NUC 11 Performance Kit model NUC11PAHi7 mendukung hingga 64GB DDR4-3200 SODIMM dual-channel, menyediakan ruang yang luas untuk multitasking intensif. Untuk penyimpanan, perangkat ini menawarkan slot M.2 yang fleksibel yang mendukung SSD NVMe terbaru dengan memastikan kecepatan akses dan penyimpanan data yang cepat. Hal ini kritikal untuk aplikasi yang melibatkan set data besar atau pemrosesan \emph{realtime}. Konektivitas adalah salah satu kekuatan utama model ini, menampilkan berbagai pilihan termasuk Thunderbolt 4, HDMI 2.0b, dan beberapa port USB 3.1. Ini memungkinkan koneksi banyak periferal dan tampilan secara bersamaan, meningkatkan produktivitas dan fleksibilitas dalam skenario penggunaan. Selain itu, dengan Intel Wi-Fi 6 dan Bluetooth 5.1, Intel NUC 11 pada model ini menawarkan konektivitas nirkabel terdepan untuk integrasi yang mulus ke dalam lingkungan jaringan apa pun. Dimensi yang ringkas untuk model ini NUC11PAHi70Z, yang hanya berukuran 117 x 112 x 51 mm dapat menjadikannya pilihan ideal untuk lingkungan di mana ruang terbatas \parencite{ASUS2024}. Kombinasi komputasi berkinerja tinggi, kemampuan grafis yang kuat, dan opsi konektivitas yang luas, semua dalam bentuk yang kecil, menonjolkan NUC11PAHi70Z sebagai pilihan teratas bagi pengguna yang membutuhkan solusi komputasi yang kuat, serbaguna, dan efisien ruang.
+% Intel NUC 11 merupakan perangkat Intel yang dirilis pada 13 Januari 2021 dengan kode nama Phantom Canyon. Salah satu model yang cukup banyak digunakan adalah Intel NUC 11 Performance Kit model NUC11PAHi7. Inti dari perangkat ini dilengkapi dengan prossesor Intel Core i7-1165G7. Prossesor ini memiliki quad-core yang memiliki kecepatan dasar 2.8 GHz dan dapat meningkat hingga 4.7 GHz.  Prossesor ini didukung oleh kartu grafis Iris XE yang menawarkan peningkatan kinerja grafis yang substansial dibandingkan dengan generasi sebelumnya. Hal ini memudahkan perangkat dalam menjalankan tugas mulai dari pengeditan video hingga bermain \emph{game}. Dari segi memori, Intel NUC 11 Performance Kit model NUC11PAHi7 mendukung hingga 64GB DDR4-3200 SODIMM dual-channel, menyediakan ruang yang luas untuk multitasking intensif. Untuk penyimpanan, perangkat ini menawarkan slot M.2 yang fleksibel yang mendukung SSD NVMe terbaru dengan memastikan kecepatan akses dan penyimpanan data yang cepat. Hal ini kritikal untuk aplikasi yang melibatkan set data besar atau pemrosesan \emph{real-time}. Konektivitas adalah salah satu kekuatan utama model ini, menampilkan berbagai pilihan termasuk Thunderbolt 4, HDMI 2.0b, dan beberapa port USB 3.1. Ini memungkinkan koneksi banyak periferal dan tampilan secara bersamaan, meningkatkan produktivitas dan fleksibilitas dalam skenario penggunaan. Selain itu, dengan Intel Wi-Fi 6 dan Bluetooth 5.1, Intel NUC 11 pada model ini menawarkan konektivitas nirkabel terdepan untuk integrasi yang mulus ke dalam lingkungan jaringan apa pun. Dimensi yang ringkas untuk model ini NUC11PAHi70Z, yang hanya berukuran 117 x 112 x 51 mm dapat menjadikannya pilihan ideal untuk lingkungan di mana ruang terbatas \parencite{ASUS2024}. Kombinasi komputasi berkinerja tinggi, kemampuan grafis yang kuat, dan opsi konektivitas yang luas, semua dalam bentuk yang kecil, menonjolkan NUC11PAHi70Z sebagai pilihan teratas bagi pengguna yang membutuhkan solusi komputasi yang kuat, serbaguna, dan efisien ruang.
 
-% % \subsection{Jetson Nano}
-% % \begin{figure}[H]
-% %     \centering
 
-% %     \includegraphics[scale=0.6]{gambar/bab2-jetson-nano.png}
- 
-% %     \caption{Jetson Nano Developer Kit}
-% %     \label{fig:jetsonnano}
-% % \end{figure}
-
-% % Jetson Nano adalah perangkat komputasi keluaran NVIDIA yang didedikasikan dalam pengembangan \textit{machine lerarning} dan komputasi edge. Jetson Nano memiliki kemampuan untuk dapat menjalankan beberapa neural networks secara paralel. Kemampuan ini memungkinkan Jetson Nano untuk digunakan dalam \textit{image clasiification}, \textit{object detection}, \textit{segmentation}, dan \textit{speech processing} \parencite{nvidiaJetsonNano}. Perangkat ini dapat menjadi solusi dalam menjalankan model \textit{machine learning} atau \textit{deep learning} pada perangkat portable dan hemat energi. 
-
-% % Perangkat ini dilengkapi dengan 128 NVIDIA CUDA cores. Ditenagai oleh prosesor Quad-core ARM Cortex-A57 MPCore, platform ini menyediakan fungsionalitas komputasi yang solid dengan memori 4 GB 64-bit LPDDR4 yang beroperasi pada 1600MHz, memberikan bandwidth 25.6 GB/s. Untuk penyimpanan, Jetson Nano dilengkapi dengan 16 GB eMMC 5.1, yang memberikan ruang yang cukup untuk aplikasi dan data pengguna. Dalam konteks pengkodean video, perangkat ini dapat mengkodekan video dengan kecepatan 250MP/sec, mendukung format seperti 1x 4K pada 30fps (HEVC), 2x 1080p pada 60fps (HEVC), dan sebagainya. Sementara itu, untuk decode video, perangkat ini menawarkan kemampuan hingga 500MP/sec, dengan dukungan untuk format seperti 1x 4K pada 60fps (HEVC) dan 2x 4K pada 30fps (HEVC). Jetson Nano juga dilengkapi dengan 12 jalur kamera (3x4 atau 4x2) MIPI CSI-2 D-PHY 1.1, yang mendukung kecepatan hingga 1.5 Gb/s per pasangan, memberikan fleksibilitas dalam pengembangan aplikasi berbasis kamera. Dalam hal konektivitas, perangkat ini menawarkan Gigabit Ethernet dan M.2 Key E, serta kemampuan tampilan melalui HDMI 2.0 dan eDP 1.4. Jetson Nano juga dilengkapi dengan 4x USB 3.0 dan USB 2.0 Micro-B, serta berbagai opsi konektivitas lainnya seperti GPIO, I2C, I2S, SPI, dan UART, semuanya dalam form factor mekanis 69.6 mm x 45 mm dengan konektor tepi 260-pin \parencite{nvidiaJetsonNano}.
 
 % \subsection{Performa Klasifikasi}
 
@@ -215,7 +343,7 @@ Dalam konteks penelitian ini, Flutter digunakan sebagai platform pengembangan ap
 %     \label{fig:confusionMatrix}
 % \end{figure}
 
-% Dalam melakukan klasifikasi dengan model, diperlukan adanya suatu tolak ukur berdasarkan serangkaian dataset pengujian yang diberikan. Salah satu metode yang dapat digunakan adalah dengan menggunakan \textit{confusion matrix}. \textit{Confusion matrix} merupakan sebuah konsep yang umum digunakan dalam menentukan performa klasifikasi model dengan memberikan informasi mengenai data aktual dan data prediksi model klasifikasi. Berdasarkan \ref{fig:confusionMatrix} \textit{confusion matrix} memiliki bentuk matrix 2 dimensi, dimana satu dimensi memiliki index yang berisikan data aktual dari \textit{class} obyek klasifikasi dan satu dimensi lainnya memiliki index yang berisikan data klasifikasi yang dihasilkan oleh model \parencite{deng2016}. 
+% Dalam melakukan klasifikasi dengan model, diperlukan adanya suatu tolak ukur berdasarkan serangkaian \emph{dataset} pengujian yang diberikan. Salah satu metode yang dapat digunakan adalah dengan menggunakan \textit{confusion matrix}. \textit{Confusion matrix} merupakan sebuah konsep yang umum digunakan dalam menentukan performa klasifikasi model dengan memberikan informasi mengenai data aktual dan data prediksi model klasifikasi. Berdasarkan \ref{fig:confusionMatrix} \textit{confusion matrix} memiliki bentuk matrix 2 dimensi, dimana satu dimensi memiliki index yang berisikan data aktual dari \textit{class} obyek klasifikasi dan satu dimensi lainnya memiliki index yang berisikan data klasifikasi yang dihasilkan oleh model \parencite{deng2016}. 
 
 % Pada \textit{confusion matrix}, terdapat empat aspek yang digunakan untuk merepresentasikan perbandingan dari kelas aktual dan kelas prediksi. Keempat aspek tersebut meliputi \textit{true positive}, \textit{true negative}, \textit{false positive}, \textit{true negative}. \textit{True positive} (TP) merupakan kondisi dimana data aktual bernilai 1 (positif) diprediksi sebagai data yang bernilai 1 (positif). Sedangkan \textit{true negative} (TN) merupakan kondisi dimana data aktual bernilai 0 (negatif) diprediksi sebagai data yang bernilai 0 (negatif). \textit{False positive} (FP) merupakan kondisi dimana data aktual bernilai 0 (negatif) diprediksi sebagai data yang bernilai 1 (positif). Sedangkan \textit{false negative} (TN) merupakan kondisi dimana data aktual bernilai 1 (positif) diprediksi sebagai data yang bernilai 0 (negatif) \parencite{shajihan2020}. Keempat aspek ini kemudian dapat dihitung nilai \textit{accuracy}, \textit{precision}, \textit{recall}, \textit{F-score} yang dapat membantu dalam memahami performa klasifikasi model dengan lebih detail lagi.
 

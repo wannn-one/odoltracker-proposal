@@ -16,4 +16,13 @@ Berdasarkan hasil pengujian yang telah dilakukan dalam tugas akhir ini, diharapk
 
 \section{Hasil Pendahuluan}
 
-Sampai saat ini, telah dilakukan studi literatur mengenai deteksi kendaraan \emph{overdimension} dan \emph{object detection}. Selain itu, telah dilakukan pengumpulan data dan pengolahan data untuk melatih model deteksi kendaraan \emph{overdimension}.
+Sampai saat ini, telah dilakukan studi literatur mengenai deteksi kendaraan \emph{overdimension} dan \emph{object detection}. Selain itu, telah dilakukan proses \emph{re-training} dari \emph{dataset} milik Ahmad Hamayan Nabih \parencite*{hamayan2024} dengan menggunakan model SSD MobileNetV2 di Jetson Nano. Hasil dari \emph{re-training} dapat dilihat pada \textbf{Gambar \ref{fig:retrain}}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{gambar/bab4-hasil-retrain.png}
+    \caption{Hasil \emph{re-training} \emph{dataset} dengan SSD MobileNetV2}
+    \label{fig:retrain}
+\end{figure}
+
+Dari hasil di atas, dapat dilihat bahwa model yang dihasilkan sudah mampu mendeteksi kendaraan \emph{overdimension} dengan cukup baik dan stabil di 35 - 40 FPS.
