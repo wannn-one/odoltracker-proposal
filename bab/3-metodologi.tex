@@ -53,6 +53,15 @@ Pada tahap ini, data citra yang diperoleh dari hasil pengambilan gambar secara m
 
 Pada tahap ini, data citra yang telah diperoleh akan dilakukan \emph{labelling}. \emph{Labelling} data dilakukan dengan cara memberikan label pada data citra yang telah diperoleh. Label yang diberikan adalah label yang menunjukkan apakah kendaraan yang melintas adalah kendaraan yang \emph{overdimension} atau tidak.
 
+\begin{figure}[H]
+  \centering
+
+  \includegraphics[scale=0.26]{gambar/bab2-truck-detection-method.png}
+
+  \caption{Ilustrasi pengelompokan kendaraan overdimensi atau tidak}
+  \label{fig:truckdetectionmethod}
+\end{figure}
+
 \subsection{Praproses Data}
 
 Pada tahap ini, data citra yang telah dilabeli akan dilakukan praproses. Praproses data dilakukan dengan cara melakukan augmentasi data. Augmentasi data dilakukan dengan cara melakukan rotasi, pergeseran, dan perubahan warna pada data citra. Hal ini dilakukan untuk memperbanyak variasi data citra yang akan digunakan dalam proses pelatihan model.
@@ -74,8 +83,9 @@ Pada tahap ini, model yang telah diimplementasikan akan digunakan untuk mendetek
 Pada tahap ini, hasil deteksi yang telah dilakukan akan disimpan ke \emph{server cloud}. Proses penyimpanan data dilakukan dengan cara mengirimkan data hasil deteksi ke \emph{database cloud}. Data hasil deteksi yang disimpan yaitu:
 
 \begin{itemize}[noitemsep,nolistsep]
-  \setlength{\itemsep}{5pt}
-  \setlength{\parskip}{0pt}
+
+  \setlength{\itemsep}{8pt}
+  \setlength{\parskip}{8pt}
   \setlength{\parsep}{0pt}
   \item ID
   \item Jenis kendaraan
